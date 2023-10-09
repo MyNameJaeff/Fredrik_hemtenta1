@@ -2,3 +2,50 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+}
+body>div{
+    display: block;
+    margin: auto;
+    width: 40%;
+    border: 1px solid black;
+    padding: 1vh;
+    margin-top: 10vh;
+    background-color: rgb(231, 230, 230);
+}
+.form_div{
+    width: 100%;
+    padding: 1vh;
+    background-color: white;
+}
+.list-group-item{
+    margin-bottom: 1vh;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.list-group-item + .list-group-item{
+    border-top-width: 1px;
+}
+.btn{
+    padding: 0.4vh 0.9vh;
+}
+span{
+    margin-left: 1vw;
+}
+li>div{
+    float: right;
+}
+li{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.input-group-text:hover{
+    background-color: #bfc1c2;
+}
+.form-check-input:hover{
+    cursor: pointer;
+}
+.checkedTrue{
+    text-decoration: line-through;
+}
