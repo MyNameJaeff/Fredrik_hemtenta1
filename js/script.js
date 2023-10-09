@@ -1,7 +1,13 @@
 const listEl = document.getElementById("unordered_list");
 const savedElements = [];
 
+// Stop from refreshing site
+var form = document.getElementById("myForm");
+function handleForm(event) { event.preventDefault(); addToList();} 
+form.addEventListener('submit', handleForm);
+
 const addToList = () => {
+    // Add element to list
     let input = document.getElementById("input_el");
     if(!savedElements.includes(input.value)){
         let i = 0;
@@ -24,6 +30,7 @@ const addToList = () => {
     input.value = "";
 }
 const checkedBox = (me) => {
+    // If checkbox checked change text style
     let textToChange = document.getElementById(me.id+"span");
     if(!textToChange.classList.contains("checkedTrue")){
         textToChange.classList += "checkedTrue";
@@ -32,6 +39,7 @@ const checkedBox = (me) => {
     }
 }
 const deleteItem = (me) => {
+    // Delete item
     let id = me.id;
     id = id.slice(0, -1);
     savedElements.splice(savedElements.indexOf(id), 1);
